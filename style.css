@@ -1,0 +1,1564 @@
+
+*{
+
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.body{
+
+    overflow: hidden;
+    height: 1080px;
+    width: 1920px;
+}
+
+
+
+#desktop{
+    height: 1080px;
+    width: 1920px;
+    background-image: url(/img/Ubuntu-Focal-Fossa-1920-x1080.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    position: absolute;
+}
+
+/* #desktop .dock{
+
+    display: none;
+    position: absolute;}
+    
+
+#desktop .dock .active{
+    display: flex;
+    height: 200px;
+    width: 30px;
+    background-color: rgba(0, 0, 0, 0.267);
+    margin-top: 300px;
+    flex-direction: column;
+    padding: 10px 0px;
+    position: absolute;}
+
+#desktop .dock img{
+
+    width: 30px;
+    height: 30px;
+    padding-top: 6px;
+
+} */
+
+
+
+.dock {
+    position: fixed;
+    left: -19px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 0.1m;
+    height: 300px;
+    /* padding: 9px; */
+    padding-left: 9px;
+    z-index: 9999;
+    background-color: rgba(7, 0, 0, 0.096);
+    transition:all ease 0.5s;
+    justify-content: space-between;
+  }
+  
+  .dock img:nth-child(1){
+
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.dock img:nth-child(2){
+
+    width: 35px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: -20px;
+    margin-top: 50px;
+}
+
+.dock img:nth-child(3){
+
+    width: 35px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: -20px;
+}
+
+.dock img{
+
+    width: 30px;
+    height: 30px;
+    /* padding-top: 6px; */
+    margin-left: 10px;
+
+}
+
+
+
+.top-bar{
+
+    height: 20px;
+    width: 1920px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 3;
+    padding-top: 5px;
+    transition: all ease 1s;
+
+}
+
+.top-bar .top-menu{
+
+    display: flex;
+    justify-content: flex-start;
+    width: 960px;
+    z-index: 3;
+
+}
+
+
+.top-bar .top-menu .activities{
+    width: 200px;
+    height: 22px;
+    margin-bottom: 600px;
+    cursor: pointer;
+
+}
+
+.top-bar .times{
+
+    width: 150px;
+    height: 100%;
+    z-index: 3;
+
+}
+
+.top-bar .setting{
+
+    width: 950px;
+    height: 20px;
+    z-index: 3;
+    position: relative;
+    transition: all ease 1s;
+}
+
+
+
+.top-bar .mini{
+    
+    display: none;
+    width: 30px;
+    height: 150px;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    transition: all ease 1s;
+    transform: translateY(25px);
+}
+
+
+.top-bar .setting div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    z-index: 3;
+}
+
+
+
+.top-bar .setting div img{
+
+    z-index: 3;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.dock img{
+
+    cursor: pointer;
+}
+
+
+.terminal {
+    width: 400px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.274);
+    color: white;
+    position: absolute;
+    border: 2px solid #ccc;
+    resize: both;
+    overflow: auto;
+    z-index: 999;
+  }
+
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 4px;
+    cursor: move;
+  }
+
+  .terminal-actions {
+    display: flex;
+    gap: 4px;
+  }
+
+  .terminal-title {
+    margin: 0;
+  }
+
+  .terminal-button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+
+  /* FIREFOX */
+
+  .firefox{
+
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: aliceblue;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    transition: all ease 0.5s;
+    z-index: 1;
+  }
+
+
+.firefox .topbar{
+
+    width: inherit;
+    height: 50px;
+    background-image: url(img/Firefox-Bar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    justify-content: flex-end;
+    position: absolute;
+}
+
+.topbar .close{
+
+    background-color: rgba(255, 0, 0, 0);
+    width: 20px;
+    height: 20px;
+    z-index: 9999;
+    float: right;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.firefox .body{
+
+
+    width: inherit;
+    height: 100%;
+    /* background-color: rgba(5, 0, 0, 0.274);
+    margin: 0px;
+    padding: 0px; */
+
+}
+
+.test{
+    height: 1080px;
+    width: 1920px;
+    margin-top: 50px;
+}
+
+.test iframe{
+    height: 1080px;
+    width: 1920px;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+
+/* CHROMIUM */
+
+.browser{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: aliceblue;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    transition: all ease 0.5s;
+    z-index: 1;
+}
+
+.browser .top-bar{
+
+    width: inherit;
+    height: 50px;
+    background-image: url(img/Chrome-Bar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    justify-content: flex-end;
+    position: absolute;
+}
+
+.top-bar .close2{
+
+    background-color: rgba(0, 0, 0, 0);
+    width: 20px;
+    height: 20px;
+    z-index: 9999;
+    float: right;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.test2{
+    height: 1080px;
+    width: 1920px;
+    margin-top: 50px;
+}
+
+.test2 iframe{
+    height: inherit;
+    width: inherit;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+/* VSCODE */
+
+.vscode{
+    height: inherit;
+    width: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+    background-image: url(/img/vscode.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.top .close3{
+
+    background-color: rgb(255, 0, 0);
+    width: 20px;
+    height: 20px;
+    z-index: 9999;
+    float: right;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+#menu{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    display: none;   
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.menu{
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 1200px;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.151);
+    top: -90px;
+    padding-top: 50px;
+}
+
+.menu .line1{
+
+    width: inherit;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+
+}
+
+.menu .line2{
+    width: inherit;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu img{
+
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    
+}
+
+
+#menu .menu .line1 img:nth-child(1){
+
+    position: absolute;
+    right: 37%;
+}
+
+
+#menu .menu .line1 img:nth-child(2){
+
+    position: absolute;
+    left: 10%;
+}
+
+
+#menu .menu .line1 img:nth-child(3){
+
+    position: absolute;
+    right: 10%;
+}
+
+#menu .menu .line1 img:nth-child(4){
+
+    position: absolute;
+    right: 63%;
+}
+
+
+
+
+
+
+/* RESPONSIVE */
+
+/* #desktop / Laptops */
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { 
+
+
+    
+    
+    #desktop{
+        height: 1080px;
+        width: 1280px;
+        background-image: url(/img/Ubuntu-Focal-Fossa-1920-x1080.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        z-index: 2;
+        position: absolute;
+    
+    }
+
+    .top-bar{
+
+        height: 20px;
+        width: 1280px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 3;
+        padding-top: 5px;
+        transition: all ease 1s;
+    
+    }
+
+
+
+
+    .top-bar .top-menu{
+
+        display: flex;
+        justify-content: flex-start;
+        width: 45%;
+        z-index: 3;
+    
+    }
+    
+    
+    .top-bar .top-menu .activities{
+        width: 100px;
+        height: 22px;
+        margin-bottom: 600px;
+        cursor: pointer;
+    
+    }
+
+    .top-bar .top-menu p{
+
+        font-size: 15px;
+        font-style: normal;
+        cursor: pointer;
+    
+    }
+    
+    .top-bar .times{
+    
+        width: 150px;
+        height: 100%;
+        z-index: 3;
+    
+    }
+    
+    .top-bar .setting{
+    
+        width: 40%;
+        height: 20px;
+        z-index: 3;
+        position: relative;
+        transition: all ease 1s;
+    }
+
+
+    .menu{
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 800px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.151);
+        top: -10%;
+        }
+
+
+        .firefox{
+
+            position: absolute;
+            width: 1230px;
+            height: inherit;
+            background-color: aliceblue;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+            transition: all ease 0.5s;
+            z-index: 1;
+          }
+        
+        
+        .firefox .topbar{
+        
+            width: inherit;
+            height: 50px;
+            background-image: url(img/Firefox-Bar.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            justify-content: flex-end;
+            position: absolute;
+        }
+        
+        .topbar .close{
+        
+            background-color: rgba(255, 0, 0, 0);
+            width: 20px;
+            height: 20px;
+            z-index: 9999;
+            float: right;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+        
+        .firefox .body{
+        
+        
+            width: inherit;
+            height: 100%;
+            /* background-color: rgba(5, 0, 0, 0.274);
+            margin: 0px;
+            padding: 0px; */
+        
+        }
+        
+        .test{
+            height: 1080px;
+            width: 1920px;
+            margin-top: 50px;
+        }
+        
+        .test iframe{
+            height: 1080px;
+            width: 1920px;
+            margin-top: 50px;
+            z-index: 1;
+        }
+        
+        
+        /* CHROMIUM */
+        
+        .browser{
+            position: absolute;
+            width: 1230px;
+            height: inherit;
+            background-color: aliceblue;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+            transition: all ease 0.5s;
+            z-index: 1;
+        }
+        
+        .browser .top-bar{
+        
+            width: 1220px;
+            height: inherit;
+            background-image: url(img/Chrome-Bar.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            justify-content: flex-end;
+            position: absolute;
+        }
+        
+        .top-bar .close2{
+        
+            background-color: rgba(0, 0, 0, 0);
+            width: 20px;
+            height: 20px;
+            z-index: 9999;
+            float: right;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+        
+        .test2{
+            height: 1080px;
+            width: 1920px;
+            margin-top: 50px;
+        }
+        
+        .test2 iframe{
+            height: inherit;
+            width: inherit;
+            margin-top: 50px;
+            z-index: 1;
+        }
+        
+        /* VSCODE */
+        
+        .vscode{
+            height: inherit;
+            width: 1220px;
+            background-color: rgba(0, 0, 0, 0);
+            display: none;
+            background-image: url(/img/vscode.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .top .close3{
+        
+            background-color: rgba(255, 0, 0, 0);
+            width: 20px;
+            height: 20px;
+            z-index: 9999;
+            float: right;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #Phone Lanscape / Tablet / */
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+
+
+    
+    
+    
+    #desktop{
+        height: 1080px;
+        width: 1280px;
+        background-image: url(/img/Ubuntu-Focal-Fossa-1920-x1080.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        z-index: 2;
+        position: absolute;
+    }
+
+    .top-bar{
+
+        height: 20px;
+        width: 1200px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 3;
+        padding-top: 5px;
+        transition: all ease 1s;
+    
+    }
+
+
+
+
+    .top-bar .top-menu{
+
+        display: flex;
+        justify-content: flex-start;
+        width: 40%;
+        z-index: 3;
+    
+    }
+    
+    
+    .top-bar .top-menu .activities{
+        width: 100px;
+        height: 22px;
+        margin-bottom: 600px;
+        cursor: pointer;
+    
+    }
+
+    .top-bar .top-menu p{
+
+        font-size: 15px;
+        font-style: normal;
+        cursor: pointer;
+    
+    }
+    
+    .top-bar .times{
+    
+        width: 150px;
+        height: 100%;
+        z-index: 3;
+    
+    }
+    
+    .top-bar .setting{
+    
+        width: 33%;
+        height: 20px;
+        z-index: 3;
+        position: relative;
+        transition: all ease 1s;
+    }
+
+
+    .menu{
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 600px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.151);
+        top: -10%;
+        left: -120px;
+        }
+
+
+      /* FIREFOX */
+
+        .firefox{
+
+            position: absolute;
+            width: 1230px;
+            height: inherit;
+            background-color: aliceblue;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+            transition: all ease 0.5s;
+            z-index: 1;
+          }
+        
+        
+        .firefox .topbar{
+        
+            width: 1020px;
+            height: 50px;
+            background-image: url(img/Firefox-Bar.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            justify-content: flex-end;
+            position: absolute;
+        }
+        
+        .topbar .close{
+        
+            background-color: rgba(255, 0, 0, 0);
+            width: 20px;
+            height: 20px;
+            z-index: 9999;
+            float: right;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+        
+        .firefox .body{
+        
+        
+            width: 1020px;
+            height: 100%;
+            /* background-color: rgba(5, 0, 0, 0.274);
+            margin: 0px;
+            padding: 0px; */
+        
+        }
+        
+        .test{
+            height: 1080px;
+            width: 1920px;
+            margin-top: 50px;
+        }
+        
+        .test iframe{
+            height: 1080px;
+            width: 1920px;
+            margin-top: 50px;
+            z-index: 1;
+        }
+        
+        
+        /* CHROMIUM */
+        
+        .browser{
+            position: absolute;
+            width: 1020px;
+            height: inherit;
+            background-color: aliceblue;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+            transition: all ease 0.5s;
+            z-index: 1;
+        }
+        
+        .browser .top-bar{
+        
+            width: 1020px;
+            height: inherit;
+            background-image: url(img/Chrome-Bar.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            justify-content: flex-end;
+            position: absolute;
+        }
+        
+        .top-bar .close2{
+        
+            background-color: rgba(0, 0, 0, 0);
+            width: 20px;
+            height: 20px;
+            z-index: 9999;
+            float: right;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+        
+        .test2{
+            height: 1080px;
+            width: 1020px;
+            margin-top: 50px;
+        }
+        
+        .test2 iframe{
+            height: inherit;
+            width: inherit;
+            margin-top: 50px;
+            z-index: 1;
+        }
+        
+        /* VSCODE */
+        
+        .vscode{
+            height: 100%;
+            width: 1020px;
+            background-color: rgba(0, 0, 0, 0);
+            display: none;
+            background-image: url(/img/vscode.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .top .close3{
+        
+            background-color: rgba(255, 0, 0, 0);
+            width: 20px;
+            height: 20px;
+            z-index: 9999;
+            float: right;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+
+        
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #Phone */
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+
+    
+    
+    
+    #desktop{
+        height: 1080px;
+        width: 800px;
+        background-image: url(/img/Ubuntu-Focal-Fossa-1920-x1080.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        z-index: 2;
+        position: absolute;
+    }
+
+    .top-bar{
+
+        height: 20px;
+        width: 800px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 3;
+        padding-top: 5px;
+        transition: all ease 1s;
+    
+    }
+
+
+
+
+    .top-bar .top-menu{
+
+        display: flex;
+        justify-content: flex-start;
+        width: 37%;
+        z-index: 3;
+    
+    }
+    
+    
+    .top-bar .top-menu .activities{
+        width: 110px;
+        height: 22px;
+        margin-bottom: 600px;
+        cursor: pointer;
+    
+    }
+
+    .top-bar .top-menu p{
+
+        font-size: 15px;
+        font-style: normal;
+        cursor: pointer;
+    
+    }
+    
+    .top-bar .times{
+    
+        width: 150px;
+        height: 100%;
+        z-index: 3;
+    
+    }
+    
+    .top-bar .setting{
+    
+        width: 40%;
+        height: 20px;
+        z-index: 3;
+        position: relative;
+        transition: all ease 1s;
+    }
+
+
+    .menu{
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 600px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.151);
+        top: -5%;
+        left: -20px;
+        }
+
+
+              /* FIREFOX */
+
+              .firefox{
+
+                position: absolute;
+                width: 780px;
+                height: inherit;
+                background-color: aliceblue;
+                background-image: url();
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: none;
+                transition: all ease 0.5s;
+                z-index: 1;
+              }
+            
+            
+            .firefox .topbar{
+            
+                width: 780px;
+                height: 50px;
+                background-image: url(img/Firefox-Bar.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: block;
+                justify-content: flex-end;
+                position: absolute;
+            }
+            
+            .topbar .close{
+            
+                background-color: rgba(255, 0, 0, 0);
+                width: 20px;
+                height: 20px;
+                z-index: 9999;
+                float: right;
+                margin-right: 3px;
+                cursor: pointer;
+            }
+            
+            .firefox .body{
+            
+            
+                width: 780px;
+                height: 100%;
+                /* background-color: rgba(5, 0, 0, 0.274);
+                margin: 0px;
+                padding: 0px; */
+            
+            }
+            
+            .test{
+                height: 1080px;
+                width: 1920px;
+                margin-top: 50px;
+            }
+            
+            .test iframe{
+                height: 1080px;
+                width: 1920px;
+                margin-top: 50px;
+                z-index: 1;
+            }
+            
+            
+            /* CHROMIUM */
+            
+            .browser{
+                position: absolute;
+                width: 780px;
+                height: inherit;
+                background-color: aliceblue;
+                background-image: url();
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: none;
+                transition: all ease 0.5s;
+                z-index: 1;
+            }
+            
+            .browser .top-bar{
+            
+                width: 780px;
+                height: inherit;
+                background-image: url(img/Chrome-Bar.jpg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: block;
+                justify-content: flex-end;
+                position: absolute;
+            }
+            
+            .top-bar .close2{
+            
+                background-color: rgba(0, 0, 0, 0);
+                width: 20px;
+                height: 20px;
+                z-index: 9999;
+                float: right;
+                margin-right: 3px;
+                cursor: pointer;
+            }
+            
+            .test2{
+                height: 1080px;
+                width: 1020px;
+                margin-top: 50px;
+            }
+            
+            .test2 iframe{
+                height: inherit;
+                width: inherit;
+                margin-top: 50px;
+                z-index: 1;
+            }
+            
+            /* VSCODE */
+            
+            .vscode{
+                height: 100%;
+                width: 780px;
+                background-color: rgba(0, 0, 0, 0);
+                display: none;
+                background-image: url(/img/vscode.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            
+            .top .close3{
+            
+                background-color: rgba(255, 0, 0, 0);
+                width: 20px;
+                height: 20px;
+                z-index: 9999;
+                float: right;
+                margin-right: 3px;
+                cursor: pointer;
+            }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 480px) { 
+
+    #desktop{
+        height: 1080px;
+        width: 480px;
+        background-image: url(/img/Ubuntu-Focal-Fossa-1920-x1080.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        z-index: 2;
+        position: absolute;
+    }
+
+    .top-bar{
+
+        height: 20px;
+        width: 800px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 3;
+        padding-top: 5px;
+        transition: all ease 1s;
+    
+    }
+
+
+
+
+    .top-bar .top-menu{
+
+        display: flex;
+        justify-content: flex-start;
+        width: 37%;
+        z-index: 3;
+    
+    }
+    
+    
+    .top-bar .top-menu .activities{
+        width: 110px;
+        height: 22px;
+        margin-bottom: 600px;
+        cursor: pointer;
+        display: none;
+    
+    }
+
+    .top-bar .top-menu p{
+
+        font-size: 15px;
+        font-style: normal;
+        cursor: pointer;
+    
+    }
+    
+    .top-bar .times{
+    
+        width: 150px;
+        height: 100%;
+        z-index: 3;
+        top: -2px;
+        position: relative;
+    
+    }
+    
+    .top-bar .setting{
+    
+        width: 50px;
+        height: 35px;
+        z-index: 3;
+        position: relative;
+        transition: all ease 1s;
+        background-image: url(img/battery.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -10px;
+        right: 5px;
+        /* left: -100px; */
+    }
+
+    .top-bar .setting img{
+    
+        display: none;
+    }
+
+
+    .menu{
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 600px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.151);
+        top: -5%;
+        left: -20px;
+        }
+
+
+              /* FIREFOX */
+
+              .firefox{
+
+                position: absolute;
+                width: 780px;
+                height: inherit;
+                background-color: aliceblue;
+                background-image: url();
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: none;
+                transition: all ease 0.5s;
+                z-index: 1;
+              }
+            
+            
+            .firefox .topbar{
+            
+                width: 780px;
+                height: 50px;
+                background-image: url(img/Firefox-Bar.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: block;
+                justify-content: flex-end;
+                position: absolute;
+            }
+            
+            .topbar .close{
+            
+                background-color: rgba(255, 0, 0, 0);
+                width: 20px;
+                height: 20px;
+                z-index: 9999;
+                float: right;
+                margin-right: 3px;
+                cursor: pointer;
+            }
+            
+            .firefox .body{
+            
+            
+                width: 780px;
+                height: 100%;
+                /* background-color: rgba(5, 0, 0, 0.274);
+                margin: 0px;
+                padding: 0px; */
+            
+            }
+            
+            .test{
+                height: 1080px;
+                width: 1920px;
+                margin-top: 50px;
+            }
+            
+            .test iframe{
+                height: 1080px;
+                width: 1920px;
+                margin-top: 50px;
+                z-index: 1;
+            }
+            
+            
+            /* CHROMIUM */
+            
+            .browser{
+                position: absolute;
+                width: 780px;
+                height: inherit;
+                background-color: aliceblue;
+                background-image: url();
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: none;
+                transition: all ease 0.5s;
+                z-index: 1;
+            }
+            
+            .browser .top-bar{
+            
+                width: 780px;
+                height: inherit;
+                background-image: url(img/Chrome-Bar.jpg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: block;
+                justify-content: flex-end;
+                position: absolute;
+            }
+            
+            .top-bar .close2{
+            
+                background-color: rgba(0, 0, 0, 0);
+                width: 20px;
+                height: 20px;
+                z-index: 9999;
+                float: right;
+                margin-right: 3px;
+                cursor: pointer;
+            }
+            
+            .test2{
+                height: 1080px;
+                width: 1020px;
+                margin-top: 50px;
+            }
+            
+            .test2 iframe{
+                height: inherit;
+                width: inherit;
+                margin-top: 50px;
+                z-index: 1;
+            }
+            
+            /* VSCODE */
+            
+            .vscode{
+                height: 100%;
+                width: 780px;
+                background-color: rgba(0, 0, 0, 0);
+                display: none;
+                background-image: url(/img/vscode.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            
+            .top .close3{
+            
+                background-color: rgba(255, 0, 0, 0);
+                width: 20px;
+                height: 20px;
+                z-index: 9999;
+                float: right;
+                margin-right: 3px;
+                cursor: pointer;
+            }
+
+
+            .dock {
+                position: fixed;
+                left: 100px;
+                top: 80%;
+                /* transform: translateX(-50%); */
+                /* display: flex; */
+                flex-direction: column;
+                align-items: center;
+                width: 500px;
+                height: 50px;
+                /* padding: 9px; */
+                padding-left: 9px;
+                z-index: 9999;
+                background-color: rgba(7, 0, 0, 0.096);
+                transition:all ease 0.5s;
+                justify-content: space-between;
+                display: none;
+              }
+              
+              .dock img:nth-child(1){
+            
+                width: 25px;
+                height: 25px;
+                margin-left: 10px;
+                display: none;
+
+            }
+            
+            .dock img:nth-child(2){
+            
+                width: 35px;
+                height: 30px;
+                margin-left: 10px;
+                margin-bottom: -20px;
+                margin-top: 50px;
+                display: none;
+
+            }
+            
+            .dock img:nth-child(3){
+            
+                width: 35px;
+                height: 30px;
+                margin-left: 10px;
+                margin-bottom: -20px;
+                display: none;
+
+            }
+
+            .dock img:nth-child(4){
+            
+                width: 35px;
+                height: 30px;
+                margin-left: 10px;
+                margin-bottom: -20px;
+                display: none;
+
+            }
+            
+            .dock img{
+            
+                width: 50px;
+                height: 50px;
+                /* padding-top: 6px; */
+                margin-left: 10px;
+            
+            }
+
+            .droid{
+
+                width: 50px;
+                height: 50px;
+                background-image: url(img/icon.png);
+                position: absolute;
+                bottom: 10%;
+                z-index: 99999;
+                right: 45%;
+                cursor: pointer;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+            }
+
+
+            .droidmenu{
+
+                width: 480px;
+                height: 900px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.26);
+                z-index: 99999;
+                display: none;
+            }
+}
